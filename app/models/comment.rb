@@ -1,0 +1,8 @@
+class Comment < ApplicationRecord
+
+  belongs_to :prototype # prototypesテーブルとのアソシエーション
+  belongs_to :user # usersテーブルとのアソシエーション
+
+# textにるバリデーションを記述した
+  validates :text, presence: true
+end
